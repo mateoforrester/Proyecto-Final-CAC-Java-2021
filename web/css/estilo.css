@@ -1,0 +1,110 @@
+/*para darle una font de google forms*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
+
+
+
+/* A todas las etiquetas HTML */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body {
+    background: #ffffff;
+    font-family: 'Poppins' , sans-serif;
+}
+
+/* Las dos franjas alrededor de la imagen --> son etiquetas hr*/
+hr {
+	background-color: orange;
+	height:15px;
+    margin-top: -1px; /*borrar ese espacio blanco que me queda entre las lineas */
+    margin-bottom: -1px; /*idem*/
+}
+
+p {
+    margin-top:15px; /*le da espacio entre el titulo y parrafo*/
+}
+
+/*MENU --> div header*/
+#header{
+
+    margin: 0px 0px; /*0px de ambos lados*/
+    width: 500px; 
+    position:fixed; /*que el menu sea fijo, si scroleas se queda fijo*/
+    z-index: 2;
+    text-align:right;
+}
+
+
+ul, ol {
+    list-style:none; /*se le vaya todo lo que es estilo de lista*/
+}
+
+
+/*Todo lo de clase nav, que dentro contenga todos los li y todos los a*/
+.nav li a {
+    background-color: rgb(11, 10, 12);
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /*en los extremos de cada item de menu*/
+    display: block; /*para que se vea mejor el menu, sino se ve todo mezclado*/
+}
+
+/*Todo lo de clase nav, que dentro contenga todos los li y todos los a, le aplicamos el hover --> aciones que cuando nos posicionamos sobre cada uno de las opciones de la li, nos va a so,brear con ese color del background*/
+.nav li a:hover{
+    background-color: rgb(58, 58, 36);
+}
+
+/*todos los li  dentro de nav, los de arriba, tengan flotado izq*/
+.nav > li {
+    float: left;
+}
+
+/*dentro de nav, las etiquetas li ul --> los submenues*/
+.nav li ul{
+    display:none; /*no queremos que se vean*/
+    position:absolute;
+    min-width: 140px;/*ancho minimo*/
+ }
+
+/*a todo lo que ocultamos, los submenues, le aplico el efecto hover, a todos los ul dentro del li*/
+ .nav li:hover > ul {
+    display:block; /* me muestra los submenues en display block*/
+}
+
+
+.nav li ul li {
+    position:relative; /*para que ingrear y consultar aparezcan al lado de pedidos y no arriba*/
+}
+
+/*Para los submenues ingresar y consultar, que aparezcan al costado*/
+.nav li ul li ul {
+    right: -140px;
+    top:0px;
+}
+
+
+.imagen{
+
+    z-index:1;
+    position:relative;
+    margin: 0px;
+}
+
+
+.texto{
+	z-index:1;
+    position:relative;
+    margin: 20px 30px 0px 30px;
+	text-align:justify
+
+}
+
+
+
+
+
+
+  
